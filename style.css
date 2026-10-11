@@ -1,289 +1,223 @@
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-size: 18px;
-  --bg: rosybrown;
-}
-body {
-  margin: 20px;
-  text-align: center;
-  background-color: azure;
-}
-/* the title and subtitle of the page */
-header {
-  padding: 20px 30px;
-  color: purple;
-  font-weight: 500;
-}
-/* flex container containing all the shapes containers */
-.container {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  padding: 10px;
-  align-items: center;
-  justify-content: center;
-  background-color: white;
-}
-/* shape containers */
-.container > div > div {
-  margin: 10px;
-  width: 240px;
-  height: 240px;
-  background-color: rgb(253, 212, 129);
-  box-shadow: 0 0 5px hsl(40, 72%, 59%);
-  border: solid 1px hsl(40, 72%, 59%);
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  position: relative;
-}
-/* shape labels */
-p {
-  padding: 0 0 20px;
-  z-index: 20;
-}
+/* Shapes with CSS: every piece is drawn inside a 240×240 box (see site.css)
+   and coloured with var(--ink). */
+
 /* circle */
 .circle {
-  background-color: var(--bg);
+  background-color: var(--ink);
   width: 120px;
   height: 120px;
   border-radius: 50%;
-  -webkit-border-radius: 50%;
-  -moz-border-radius: 50%;
-  -ms-border-radius: 50%;
-  -o-border-radius: 50%;
 }
+
 /* 3quarter-circle */
 .quarter3-circle {
   border-radius: 50%;
-  -webkit-border-radius: 50%;
-  -moz-border-radius: 50%;
-  -ms-border-radius: 50%;
-  -o-border-radius: 50%;
-  border: solid 60px var(--bg);
+  border: solid 60px var(--ink);
   border-top: solid 60px transparent;
   transform: rotate(-45deg);
-  -webkit-transform: rotate(-45deg);
-  -moz-transform: rotate(-45deg);
-  -ms-transform: rotate(-45deg);
-  -o-transform: rotate(-45deg);
 }
+
 /* semi-circle1 */
 .semi-circle1 {
   width: 120px;
   height: 60px;
-  background-color: var(--bg);
+  background-color: var(--ink);
   border-top-left-radius: 60px;
   border-top-right-radius: 60px;
 }
+
 /* semi-circle2 */
 .semi-circle2 {
   border-radius: 50%;
-  -webkit-border-radius: 50%;
-  -moz-border-radius: 50%;
-  -ms-border-radius: 50%;
-  -o-border-radius: 50%;
   border-bottom: solid 60px transparent;
   border-left: solid 60px transparent;
-  border-right: solid 60px var(--bg);
-  border-top: solid 60px var(--bg);
+  border-right: solid 60px var(--ink);
+  border-top: solid 60px var(--ink);
   transform: rotate(-45deg);
-  -webkit-transform: rotate(-45deg);
-  -moz-transform: rotate(-45deg);
-  -ms-transform: rotate(-45deg);
-  -o-transform: rotate(-45deg);
   position: absolute;
   top: 85px;
 }
+
 /* quarter-circle */
 .quarter-circle {
   border-radius: 50%;
-  -webkit-border-radius: 50%;
-  -moz-border-radius: 50%;
-  -ms-border-radius: 50%;
-  -o-border-radius: 50%;
   border: solid 60px transparent;
-  border-top: solid 60px var(--bg);
+  border-top: solid 60px var(--ink);
   transform: rotate(-45deg);
-  -webkit-transform: rotate(-45deg);
-  -moz-transform: rotate(-45deg);
-  -ms-transform: rotate(-45deg);
-  -o-transform: rotate(-45deg);
   position: absolute;
   top: 85px;
   left: 80px;
 }
+
 /* oval */
 .oval {
-  background-color: var(--bg);
+  background-color: var(--ink);
   width: 160px;
   height: 100px;
   border-radius: 50%;
 }
+
 /* egg */
 .egg {
-  background-color: var(--bg);
+  background-color: var(--ink);
   width: 100px;
   height: 140px;
   border-radius: 50% 50% 50% 50% / 60% 60% 40% 40%;
-  -webkit-border-radius: 50% 50% 50% 50% / 60% 60% 40% 40%;
-  -moz-border-radius: 50% 50% 50% 50% / 60% 60% 40% 40%;
-  -ms-border-radius: 50% 50% 50% 50% / 60% 60% 40% 40%;
-  -o-border-radius: 50% 50% 50% 50% / 60% 60% 40% 40%;
 }
+
 /* pill */
 .pill {
   width: 120px;
   height: 60px;
-  background-color: var(--bg);
+  background-color: var(--ink);
   border-radius: 50px;
-  -webkit-border-radius: 50px;
-  -moz-border-radius: 50px;
-  -ms-border-radius: 50px;
-  -o-border-radius: 50px;
 }
+
 /* equilateral triangle */
 .equil-triangle {
   border-left: solid 60px transparent;
   border-right: solid 60px transparent;
-  border-bottom: solid 60px var(--bg);
+  border-bottom: solid 60px var(--ink);
 }
+
 /* isosceles triangle */
 .iso-triangle {
   border: solid 40px transparent;
-  border-bottom: solid 120px var(--bg);
+  border-bottom: solid 120px var(--ink);
   position: absolute;
   top: 20px;
 }
+
 /* right angled triangle */
 .right-triangle {
-  border-bottom: solid 120px var(--bg);
+  border-bottom: solid 120px var(--ink);
   border-left: solid transparent 60px;
 }
+
 /* square */
 .square {
-  background-color: var(--bg);
+  background-color: var(--ink);
   width: 120px;
   height: 120px;
 }
+
 /* rectangle */
 .rectangle {
-  background-color: var(--bg);
+  background-color: var(--ink);
   width: 160px;
   height: 120px;
 }
+
 /* parallelogram */
 .parallelogram {
   width: 120px;
   height: 120px;
-  background-color: var(--bg);
+  background-color: var(--ink);
   transform: skewX(340deg);
-  -webkit-transform: skewX(340deg);
-  -moz-transform: skewX(340deg);
-  -ms-transform: skewX(340deg);
-  -o-transform: skewX(340deg);
 }
+
 /* trapedoid1 */
 .trapezoid1 {
   width: 160px;
-  border-bottom: solid 120px var(--bg);
+  border-bottom: solid 120px var(--ink);
   border-left: solid 40px transparent;
   border-right: solid 20px transparent;
 }
+
 /* trapezoid */
 .trapezoid2 {
   width: 100px;
-  height: 121px;
-  background-color: var(--bg);
-  /* position: absolute; */
+  height: 120px;
+  background-color: var(--ink);
+  /* position: absolute
+  */;
 }
+
 .trapezoid2::before {
   content: "";
   position: absolute;
   display: block;
   border-left: solid 40px transparent;
-  border-bottom: solid 120px var(--bg);
+  border-bottom: solid 120px var(--ink);
   top: 60px;
-  left: 29px;
+  left: 31px;
 }
+
 .trapezoid2::after {
   content: "";
   position: absolute;
   border-right: solid 20px transparent;
-  border-bottom: solid 120px var(--bg);
+  border-bottom: solid 120px var(--ink);
   top: 60px;
-  right: 49px;
+  right: 51px;
 }
+
 /* rhombus */
 .rhombus {
   width: 120px;
   height: 120px;
-  background-color: var(--bg);
+  background-color: var(--ink);
   transform: rotate(45deg);
-  -webkit-transform: rotate(45deg);
-  -moz-transform: rotate(45deg);
-  -ms-transform: rotate(45deg);
-  -o-transform: rotate(45deg);
 }
+
 /* kite */
 .kite {
   border-left: solid 60px transparent;
   border-right: solid 60px transparent;
-  border-bottom: solid 60px var(--bg);
+  border-bottom: solid 60px var(--ink);
   position: absolute;
   top: 40px;
 }
+
 .kite::before {
   content: "";
   display: block;
   position: absolute;
-  top: 60px;
+  top: 59px;
   left: -60px;
   border-left: solid 60px transparent;
   border-right: solid 60px transparent;
-  border-bottom: solid 100px var(--bg);
+  border-bottom: solid 100px var(--ink);
   transform: rotate(180deg);
-  -webkit-transform: rotate(180deg);
-  -moz-transform: rotate(180deg);
-  -ms-transform: rotate(180deg);
-  -o-transform: rotate(180deg);
 }
+
 /* pentagon */
 .pentagon {
   position: absolute;
   border: solid 50px transparent;
-  border-bottom: solid 60px var(--bg);
+  border-bottom: solid 60px var(--ink);
   top: 10px;
 }
+
 .pentagon::before {
   content: "";
   position: absolute;
   display: block;
   width: 100px;
-  height: 60px;
-  background-color: var(--bg);
-  top: 60px;
+  height: 61px;
+  background-color: var(--ink);
+  top: 59px;
   left: -50px;
 }
+
 /* star */
 .star {
   border: solid 80px transparent;
-  border-top: solid 120px var(--bg);
+  border-top: solid 120px var(--ink);
   position: absolute;
   top: 80px;
 }
+
 .star::after {
   content: "";
   position: absolute;
   display: block;
   border: solid 80px transparent;
-  border-bottom: solid 120px var(--bg);
+  border-bottom: solid 120px var(--ink);
   top: -240px;
   left: -80px;
 }
+
 /* crescent */
 .crescent {
   position: absolute;
@@ -292,133 +226,88 @@ p {
   background-color: transparent;
   width: 120px;
   height: 120px;
-  box-shadow: 10px 15px 0px 10px var(--bg);
+  box-shadow: 10px 15px 0px 10px var(--ink);
   border-radius: 50%;
-  -webkit-border-radius: 50%;
-  -moz-border-radius: 50%;
-  -ms-border-radius: 50%;
-  -o-border-radius: 50%;
   transform: rotate(-15deg);
-  -webkit-transform: rotate(-15deg);
-  -moz-transform: rotate(-15deg);
-  -ms-transform: rotate(-15deg);
-  -o-transform: rotate(-15deg);
 }
+
 /* pyramid */
 .pyramid {
-  border-top: solid 60px var(--bg);
-  border-left: solid 60px rgb(170, 134, 134);
-  border-right: solid 60px rgb(170, 134, 134);
-  border-bottom: solid 60px var(--bg);
+  border-top: solid 60px var(--ink);
+  border-left: solid 60px color-mix(in srgb, var(--ink) 70%, black);
+  border-right: solid 60px color-mix(in srgb, var(--ink) 70%, black);
+  border-bottom: solid 60px var(--ink);
 }
 
 .horse-shoe {
   width: 100px;
   height: 120px;
-  border: solid 30px var(--bg);
+  border: solid 30px var(--ink);
   border-right: transparent;
   border-radius: 60px;
-  -webkit-border-radius: 60px;
-  -moz-border-radius: 60px;
-  -ms-border-radius: 60px;
-  -o-border-radius: 60px;
   transform: rotate(90deg);
-  -webkit-transform: rotate(90deg);
-  -moz-transform: rotate(90deg);
-  -ms-transform: rotate(90deg);
-  -o-transform: rotate(90deg);
 }
-.weird-shape {
-  height: 130px;
-  width: 100px;
-  background-color: transparent;
-  border-radius: 50px;
-  box-shadow: inset 0 0 0 30px var(--bg);
-  border-right: solid 30px black;
-}
-.plus{
-  background-color: var(--bg);
+
+.plus {
+  background-color: var(--ink);
   width: 20px;
   height: 120px;
 }
-.plus::before{
+
+.plus::before {
   content: '';
   display: block;
   position: absolute;
-  background-color: var(--bg);
+  background-color: var(--ink);
   width: 20px;
   height: 120px;
   transform: rotate(90deg);
-  -webkit-transform: rotate(90deg);
-  -moz-transform: rotate(90deg);
-  -ms-transform: rotate(90deg);
-  -o-transform: rotate(90deg);
 }
+
 /* heart */
-.heart{
-  background-color: var(--bg);
+.heart {
+  background-color: var(--ink);
   width: 70px;
   height: 120px;
   position: absolute;
   left: 60px;
   border-radius: 50px 50px 0 0;
-  -webkit-border-radius: 50px 50px 0 0;
-  -moz-border-radius: 50px 50px 0 0;
-  -ms-border-radius: 50px 50px 0 0;
-  -o-border-radius: 50px 50px 0 0;
   transform: rotate(-45deg);
-  -webkit-transform: rotate(-45deg);
-  -moz-transform: rotate(-45deg);
-  -ms-transform: rotate(-45deg);
-  -o-transform: rotate(-45deg);
 }
-.heart::after{
+
+.heart::after {
   content: '';
   display: block;
   position: absolute;
-  background-color: var(--bg);
+  background-color: var(--ink);
   width: 70px;
   height: 120px;
   position: absolute;
   top: 25px;
   left: 25px;
   border-radius: 50px 50px 0 0;
-  -webkit-border-radius: 50px 50px 0 0;
-  -moz-border-radius: 50px 50px 0 0;
-  -ms-border-radius: 50px 50px 0 0;
-  -o-border-radius: 50px 50px 0 0;
   transform: rotate(90deg);
-  -webkit-transform: rotate(90deg);
-  -moz-transform: rotate(90deg);
-  -ms-transform: rotate(90deg);
-  -o-transform: rotate(90deg);
 }
+
 /* magnifying-glass */
-.magnifying-glass{
- width: 100px;
- height: 100px;
- border: 30px solid var(--bg);
- position: absolute;
- top: 45px;
- left: 45px;
- border-radius: 50%;
- -webkit-border-radius: 50%;
- -moz-border-radius: 50%;
- -ms-border-radius: 50%;
- -o-border-radius: 50%;
+.magnifying-glass {
+  width: 100px;
+  height: 100px;
+  border: 30px solid var(--ink);
+  position: absolute;
+  top: 45px;
+  left: 45px;
+  border-radius: 50%;
 }
-.magnifying-glass::after{
+
+.magnifying-glass::after {
   content: '';
   display: block;
   position: absolute;
   width: 30px;
   height: 70px;
-  background-color: var(--bg);
+  background-color: var(--ink);
   transform: rotate(-45deg);
-  -webkit-transform: rotate(-45deg);
-  -moz-transform: rotate(-45deg);
-  -ms-transform: rotate(-45deg);
-  -o-transform: rotate(-45deg);
   right: -50px;
   bottom: -70px;
 }

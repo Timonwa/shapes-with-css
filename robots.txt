@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://shapes-with-css.vercel.app/sitemap.xml
